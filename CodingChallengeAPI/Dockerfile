@@ -10,7 +10,6 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /CodingChallengeAPI
 COPY ["CodingChallengeAPI/CodingChallengeAPI.csproj", "CodingChallengeAPI/"]
-COPY ["CodingChallenge.core/CodingChallenge.core.csproj", "CodingChallenge.core/"]
 RUN dotnet restore "./CodingChallengeAPI/CodingChallengeAPI.csproj"
 COPY . .
 WORKDIR "/src/CodingChallengeAPI"
